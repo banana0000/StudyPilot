@@ -3,6 +3,7 @@ services:
     name: studypilot
     runtime: python
     buildCommand: pip install -r requirements.txt
+    plan: free
     startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 app:server
     healthCheckPath: /
     autoDeployTrigger: commit
