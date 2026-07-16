@@ -1,0 +1,159 @@
+:root {
+  --sp-violet: #db2777;
+  --sp-blue: #2563eb;
+  --sp-teal: #3b82f6;
+  --sp-orange: #f472b6;
+  --sp-ink: #1f2937;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #fff1f2 0%, #f0fdf4 46%, #ecfdf5 100%);
+}
+
+#studypilot-shell .mantine-AppShell-header {
+  background: linear-gradient(105deg, rgba(30, 64, 175, .98), rgba(37, 99, 235, .96) 55%, rgba(96, 165, 250, .96));
+  color: white;
+  border-bottom: 0;
+  box-shadow: 0 8px 24px rgba(76, 29, 149, .18);
+}
+
+#studypilot-shell .mantine-AppShell-navbar {
+  background: rgba(255, 255, 255, .88);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(124, 58, 237, .12);
+}
+
+#studypilot-shell .mantine-AppShell-main {
+  background: transparent;
+}
+
+#studypilot-shell .mantine-Card-root {
+  background: rgba(255, 255, 255, .88);
+  box-shadow: 0 8px 24px rgba(30, 27, 75, .06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+#studypilot-shell .mantine-Card-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(76, 29, 149, .12);
+}
+
+.metric-card {
+  overflow: hidden;
+  position: relative;
+}
+.metric-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+}
+.metric-pink::before { background: linear-gradient(#db2777, #f9a8d4); }
+.metric-blue::before { background: linear-gradient(#2563eb, #93c5fd); }
+.metric-sky::before { background: linear-gradient(#3b82f6, #bfdbfe); }
+
+#upload-material {
+  border: 2px dashed rgba(124, 58, 237, .35);
+  border-radius: 14px;
+  padding: 6px;
+}
+
+#studypilot-shell .mantine-Tabs-tab[data-active="true"] {
+  color: var(--sp-violet);
+  border-color: var(--sp-violet);
+}
+
+#studypilot-shell .mantine-Badge-root {
+  font-weight: 700;
+}
+
+@media (max-width: 48em) {
+  #studypilot-shell .mantine-AppShell-header { background: linear-gradient(105deg, rgba(30, 64, 175, .98), rgba(37, 99, 235, .96) 55%, rgba(96, 165, 250, .96)); }
+}
+
+/* Colorful gradient layer */
+.metric-pink { background: linear-gradient(135deg, rgba(252, 231, 243, .96), rgba(251, 207, 232, .78)); }
+.metric-blue { background: linear-gradient(135deg, rgba(219, 234, 254, .96), rgba(191, 219, 254, .78)); }
+.metric-sky { background: linear-gradient(135deg, rgba(224, 231, 255, .96), rgba(191, 219, 254, .74)); }
+
+#studypilot-shell .mantine-Button-root {
+  background-image: linear-gradient(110deg, #db2777, #2563eb 52%, #3b82f6);
+  border: 0;
+  box-shadow: 0 7px 16px rgba(76, 29, 149, .2);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+#studypilot-shell .mantine-Button-root:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(76, 29, 149, .3);
+}
+
+#upload-material {
+  background: linear-gradient(135deg, rgba(237, 233, 254, .65), rgba(219, 234, 254, .65), rgba(204, 251, 241, .65));
+}
+
+#studypilot-shell .mantine-Tabs-list {
+  background: linear-gradient(90deg, rgba(237, 233, 254, .7), rgba(219, 234, 254, .7));
+  border-radius: 12px;
+  padding: 4px;
+}
+
+/* DMC color-scheme aware surfaces */
+html[data-mantine-color-scheme="dark"] body {
+  background: linear-gradient(135deg, #2a1022 0%, #172554 50%, #172554 100%);
+}
+
+html[data-mantine-color-scheme="dark"] #studypilot-shell .mantine-AppShell-navbar {
+  background: rgba(18, 18, 30, .88);
+  border-right-color: rgba(167, 139, 250, .2);
+}
+
+html[data-mantine-color-scheme="dark"] #studypilot-shell .mantine-Card-root {
+  background: rgba(29, 29, 44, .9);
+  border-color: rgba(167, 139, 250, .16);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .24);
+}
+
+html[data-mantine-color-scheme="dark"] .metric-pink { background: linear-gradient(135deg, rgba(131, 24, 67, .72), rgba(157, 23, 77, .68)); }
+html[data-mantine-color-scheme="dark"] .metric-blue { background: linear-gradient(135deg, rgba(30, 58, 138, .68), rgba(29, 78, 216, .68)); }
+html[data-mantine-color-scheme="dark"] .metric-sky { background: linear-gradient(135deg, rgba(30, 64, 175, .68), rgba(30, 58, 138, .68)); }
+
+html[data-mantine-color-scheme="dark"] #upload-material,
+html[data-mantine-color-scheme="dark"] #studypilot-shell .mantine-Tabs-list {
+  background: linear-gradient(90deg, rgba(76, 29, 149, .32), rgba(30, 64, 175, .28));
+  border-color: rgba(167, 139, 250, .32);
+}
+/* Button text contrast */
+#studypilot-shell .mantine-Button-root {
+  color: #ffffff;
+}
+
+#upload-material .upload-button {
+  color: #111827;
+}
+/* Standalone upload trigger */
+#upload-material {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: fit-content;
+  cursor: pointer;
+}
+
+#upload-material .upload-link {
+  color: #111827;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+#open-help {
+  color: #ffffff;
+}
+/* Stronger sidebar navigation icons */
+#studypilot-shell .mantine-AppShell-navbar .mantine-ThemeIcon-root {
+  box-shadow: 0 4px 10px rgba(37, 99, 235, .25);
+  font-weight: 800;
+}
+
+#studypilot-shell .mantine-AppShell-navbar .mantine-NavLink-root {
+  min-height: 48px;
+}
